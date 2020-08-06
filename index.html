@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherAppLisa</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+        <script src="https://kit.fontawesome.com/397fde9f17.js" crossorigin="anonymous"></script>
+
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100&display=swap" rel="stylesheet"/>
+        
+        <link rel="stylesheet" href="style/style.css"/>
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+        <span class="border border-primary"></span>
+  </head>
+
+  <body>
+
+    <div class="container">
+    <div class="weather-app">
+      <h1>
+Greetings
+      </h1>
+
+      <form id="location-form" class="form-inline" action="/action_page.php">
+        <input type="text" id="search-box" placeholder="enter current location" />
+        <input type="submit" value="search" />
+              <button type="button" id="location-emoji">📍</button>
+      </form>
+      <p class="current-update-location"></p>
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li id="current-location">
+              Give your Current location
+            </li>
+            <li id="date1"> 
+            </li>
+          <li id="temperature-posted"> 
+            ℃
+            </li>
+            <li>
+              Pollen medium 6.6
+            </li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <ul>
+              <li id="description">
+              </li>
+            <li id="humidity">
+              Humidity 90%
+            </li>
+            <li id ="wind">  
+              Wind 5 Km/H
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="last-updated">
+      <em> Last updated on July 24, 9pm  </em> 
+      </p>
+      <p class="current-weather-icon"></p>
+<i class="fas fa-sun"></i>
+    </p>
+    <p class="upcoming-weather">
+        <div class="row">
+<div class="col" id="date2">
+   Sat. July 25 ☀️  32℃ / 90℉ pollen low 2.1
+</div>
+<div class="col" id="date2'">
+    Sun. July 26  🌧 24℃ / 75℉ pollen low 2.1
+</div>
+<div class="col" id="date3">
+    Mon. July 27 🌦 27℃ / 80℉ pollen low 2.1
+</div>
+<div class="col" id="date4">
+    Tue. July 28 ☀️ 29℃ / 84℉ pollen low 2.1
+</div>
+<div class="col" id="date5">
+    Wed. July 29 ☀️ 35℃ / 96℉ pollen low 2.1
+</div>
+        </div>
+    </p>
+    <p class="bottom-page">
+        <div class="row">
+            <div class="col-6">
+                Source
+            </div>
+        <div class="col-6">
+        Coded by Lisa Wand
+        </div>
+        </div>
+    </p>
+    </div>
+    </div>
+           <script href="java/app.js">
+            </script>  
+  </body>
+    <script src="java/app.js"></script>
+</html>
