@@ -75,6 +75,7 @@ ul {
   list-style: none;
   padding: 0;
   color: #f3efed;
+  text-transform: capitalize;
 }
 .last-updated {
   font-family: "Heebo", sans-serif;

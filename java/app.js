@@ -70,6 +70,12 @@ function showWeather(response) {
   let inspectHumidity = response.data.main.humidity;
   let realHumidity = document.querySelector("#humidity");
   realHumidity.innerHTML = `Humidity ${inspectHumidity} %`;
+
+  let actualWeatherIcon = document.querySelector("#weather-icon");
+  actualWeatherIcon.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 // searched city to be connected to apiUrl
