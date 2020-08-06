@@ -95,9 +95,12 @@ i {
 .col {
   color: #f3efed;
 }
-.bottom-page {
+.github-link {
   margin: auto;
   padding: auto;
-  font-family: "Heebo", sans-serif;
-  opacity: 50%;
+  font-family: "Work Sans", sans-serif;
+  color: black;
+  margin: 10px 160px;
+  font-weight: 300;
+  font-size: medium;
 }
