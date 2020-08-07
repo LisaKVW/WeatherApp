@@ -54,14 +54,13 @@ updateTodayDay.innerHTML = formatDate();
 //show up as your searched city on the app in #current-location
 
 function showWeather(response) {
-  console.log(response);
   document.querySelector("#current-location").innerHTML = response.data.name;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
 
   let temperature = Math.round(response.data.main.temp);
   let actualWeatherLocation = document.querySelector("#temperature-posted");
-  actualWeatherLocation.innerHTML = `${temperature} ℃ `;
+  actualWeatherLocation.innerHTML = `${temperature} ℃`;
 
   let inspectWind = response.data.wind.speed;
   let realWind = document.querySelector("#wind");
@@ -77,21 +76,38 @@ function showWeather(response) {
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
+// forecast
+function showForecast(response) {
+let forecastElement = document.querySelector("#forecast");
+
+forecastElement.innerHTML =`
+         <div class="row">
+<div class="col-2" id="date2">
+<h5> 12:00</h5>
+<img src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png" 
+alt=""/>
+
+<div class="weather=forceast-temp">
+ 22 ℃
+ </div>`;
 
 // searched city to be connected to apiUrl
 
-function search(event) {
+function handleSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#search-box").value;
 
   searchCity(city);
 }
+// api to find weather city and forecast
 
 function searchCity(city) {
   let apiKey = "47b783e374dd1d17b34b52141082af29";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
   axios.get(apiUrl).then(showWeather);
+
+  let apiUrlFor = `https://pro.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrlFor).then(showForecast);
 }
 
 // emoji - quick current location
@@ -116,7 +132,7 @@ button.addEventListener("click", getCurrentPosition);
 
 // form search submit button - to submmit location
 let form = document.querySelector("#location-form");
-form.addEventListener("submit", search);
+form.addEventListener("submit", handleSubmit);
 
 // last updated
 
