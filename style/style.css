@@ -77,17 +77,10 @@ ul {
   color: #f3efed;
   text-transform: capitalize;
 }
-.last-updated {
+
+#forecast {
   font-family: "Heebo", sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-  color: #f3efed;
-}
-.upcoming-weater {
-  font-family: "Heebo", sans-serif;
-}
-i {
-  font-size: 50px;
+  font-size: 16px;
   padding: 0 20;
   margin: 10px;
   text-align: auto;

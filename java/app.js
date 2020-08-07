@@ -33,6 +33,13 @@ function formatDate(date) {
   ];
   let month = months[now.getMonth()];
   let today = now.getDate();
+
+  return `${day}, ${month} ${today} ${formatHours(timestamp)}`;
+}
+// forecast time
+
+function formatHours(timestamp) {
+  let now = new Date(timestamp);
   let hours = now.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -41,10 +48,9 @@ function formatDate(date) {
   let minutes = now.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
-  }
 
-  return `${day}, ${month} ${today} ${hours}:${minutes}`;
-}
+    return `${hours}: ${minutes}`;
+  }
 
 let updateTodayDay = document.querySelector("#date1");
 updateTodayDay.innerHTML = formatDate();
@@ -76,21 +82,26 @@ function showWeather(response) {
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
+
 // forecast
 function showForecast(response) {
-let forecastElement = document.querySelector("#forecast");
+  let forecastElement = document.querySelector("#forecast");
+  let forecast = response.data.list[0];
 
-forecastElement.innerHTML =`
+  forecastElement.innerHTML = `
          <div class="row">
 <div class="col-2" id="date2">
-<h5> 12:00</h5>
-<img src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png" 
-alt=""/>
-
+<h5> 
+   ${formatHours(forecast.dt)}
+</h5>
+<img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"/>
 <div class="weather=forceast-temp">
- 22 ℃
+ <strong> ${Math.round(forecast.main.temp_max)} ℃ </strong> ${Math.round(
+    forecast.main.temp_min
+  )} ℃
  </div>`;
-
+ 
+}
 // searched city to be connected to apiUrl
 
 function handleSubmit(event) {
@@ -106,7 +117,7 @@ function searchCity(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showWeather);
 
-  let apiUrlFor = `https://pro.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  apiUrlFor = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrlFor).then(showForecast);
 }
 
@@ -133,7 +144,3 @@ button.addEventListener("click", getCurrentPosition);
 // form search submit button - to submmit location
 let form = document.querySelector("#location-form");
 form.addEventListener("submit", handleSubmit);
-
-// last updated
-
-// upcoming days
