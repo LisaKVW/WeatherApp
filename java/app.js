@@ -92,14 +92,12 @@ function showForecast(response) {
     forecastElement.innerHTML += `
          <div class="row">
 <div class="col" id="date2">
-<h5> 
+<h6> 
    ${formatHours(forecast.dt * 1000)}
-</h5>
+</h6>
 <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"/>
 <div class="weather=forceast-temp">
- <strong> ${Math.round(forecast.main.temp_max)} ℃ </strong> ${Math.round(
-      forecast.main.temp_min
-    )} ℃
+ <strong> ${Math.round(forecast.main.temp_max)} ℃ </strong>
  </div>`;
   }
 }
