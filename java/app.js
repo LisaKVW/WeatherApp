@@ -29,7 +29,7 @@ function formatDate(date) {
     "Sep.",
     "Oct.",
     "Nov.",
-    "Dec."
+    "Dec.",
   ];
   let month = months[now.getMonth()];
   let today = now.getDate();
@@ -46,7 +46,9 @@ function formatHours(timestamp) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  retu
+  return `${hours}: ${minutes}`;
+}
+
 let updateTodayDay = document.querySelector("#date1");
 updateTodayDay.innerHTML = formatDate();
 
@@ -87,7 +89,7 @@ function showForecast(response) {
          <div class="row">
 <div class="col-2" id="date2">
 <h5> 
-   ${formatHours(forecast.dt* 1000)}
+   ${formatHours(forecast.dt * 1000)}
 </h5>
 <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"/>
 <div class="weather=forceast-temp">
@@ -95,7 +97,6 @@ function showForecast(response) {
     forecast.main.temp_min
   )} ℃
  </div>`;
- 
 }
 // searched city to be connected to apiUrl
 
