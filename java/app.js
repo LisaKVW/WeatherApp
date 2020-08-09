@@ -61,7 +61,9 @@ function showWeather(response) {
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
 
-  let temperature = Math.round(response.data.main.temp);
+  celciusTemperature = response.data.main.temp;
+
+  let temperature = Math.round(celciusTemperature);
   let actualWeatherLocation = document.querySelector("#temperature-posted");
   actualWeatherLocation.innerHTML = `${temperature} ℃`;
 
@@ -143,3 +145,17 @@ button.addEventListener("click", getCurrentPosition);
 // form search submit button - to submmit location
 let form = document.querySelector("#location-form");
 form.addEventListener("submit", handleSubmit);
+
+//fahrenheit click
+
+function showFahrenheitTemperature(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temperature-posted");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+
+let celciusTemperature = null;
