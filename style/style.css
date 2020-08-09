@@ -80,13 +80,13 @@ ul {
 
 #forecast {
   font-family: "Heebo", sans-serif;
-  font-size: 10px;
-  padding: 0 20;
-  margin: 10px;
+  font-size: 14px;
+  padding: 0 5px;
+  margin: auto;
   text-align: auto;
   color: #f5a841;
 }
-.col-2 {
+.col {
   color: #f3efed;
 }
 .github-link {

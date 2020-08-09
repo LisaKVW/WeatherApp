@@ -83,20 +83,25 @@ function showWeather(response) {
 // forecast
 function showForecast(response) {
   let forecastElement = document.querySelector("#forecast");
-  let forecast = response.data.list[0];
+  forecastElement.innerHTML = null;
+  let forecast = null;
 
-  forecastElement.innerHTML = `
+  for (let index = 0; index < 5; index++) {
+    let forecast = response.data.list[index];
+
+    forecastElement.innerHTML += `
          <div class="row">
-<div class="col-2" id="date2">
+<div class="col" id="date2">
 <h5> 
    ${formatHours(forecast.dt * 1000)}
 </h5>
 <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"/>
 <div class="weather=forceast-temp">
  <strong> ${Math.round(forecast.main.temp_max)} ℃ </strong> ${Math.round(
-    forecast.main.temp_min
-  )} ℃
+      forecast.main.temp_min
+    )} ℃
  </div>`;
+  }
 }
 // searched city to be connected to apiUrl
 
