@@ -29,29 +29,24 @@ function formatDate(date) {
     "Sep.",
     "Oct.",
     "Nov.",
-    "Dec.",
+    "Dec."
   ];
   let month = months[now.getMonth()];
   let today = now.getDate();
-
-  return `${day}, ${month} ${today} ${formatHours(timestamp)}`;
+  return `${day}, ${month} ${today} ${formatHours(now)}`;
 }
 // forecast time
-
 function formatHours(timestamp) {
   let now = new Date(timestamp);
   let hours = now.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
-
   let minutes = now.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
-
-    return `${hours}: ${minutes}`;
   }
-
+  retu
 let updateTodayDay = document.querySelector("#date1");
 updateTodayDay.innerHTML = formatDate();
 
@@ -92,7 +87,7 @@ function showForecast(response) {
          <div class="row">
 <div class="col-2" id="date2">
 <h5> 
-   ${formatHours(forecast.dt)}
+   ${formatHours(forecast.dt* 1000)}
 </h5>
 <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"/>
 <div class="weather=forceast-temp">
