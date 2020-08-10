@@ -79,7 +79,7 @@ ul {
 #forecast {
   font-family: "Heebo", sans-serif;
   font-size: 14px;
-  padding: 0 5px;
+  padding: 0 5px 10px 0;
   margin: auto;
   text-align: center;
   color: #f5a841;

@@ -120,7 +120,6 @@ function searchCity(city) {
   apiUrlFor = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrlFor).then(showForecast);
 }
-
 // emoji - quick current location
 
 function myLocation(position) {
@@ -159,3 +158,6 @@ let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
 let celciusTemperature = null;
+
+//--Default city on load
+searchCity("New York");
