@@ -96,6 +96,15 @@ ul {
   color: #f3efed;
   padding: 0 0 20px 0;
 }
+.weather-now .active {
+  color: black;
+  cursor: default;
+}
+.weather-now .active:hover {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
 
 h6 {
   margin: 0;
