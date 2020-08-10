@@ -63,9 +63,8 @@ function showWeather(response) {
 
   celciusTemperature = response.data.main.temp;
 
-  let temperature = Math.round(celciusTemperature);
   let actualWeatherLocation = document.querySelector("#temperature-posted");
-  actualWeatherLocation.innerHTML = `${temperature} ℃`;
+  actualWeatherLocation.innerHTML = Math.round(celciusTemperature);
 
   let inspectWind = response.data.wind.speed;
   let realWind = document.querySelector("#wind");
@@ -150,9 +149,10 @@ form.addEventListener("submit", handleSubmit);
 
 function showFahrenheitTemperature(event) {
   event.preventDefault();
+  let actualWeatherLocation = document.querySelector("#temperature-posted");
+
   let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
-  let temperatureElement = document.querySelector("#temperature-posted");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  actualWeatherLocation.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
