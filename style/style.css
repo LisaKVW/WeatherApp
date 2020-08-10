@@ -97,7 +97,7 @@ ul {
   padding: 0 0 20px 0;
 }
 .weather-now .active {
-  color: black;
+  color: #f3efed;
   cursor: default;
 }
 .weather-now .active:hover {

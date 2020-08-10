@@ -143,12 +143,18 @@ function showFahrenheitTemperature(event) {
   event.preventDefault();
   let actualWeatherLocation = document.querySelector("#temperature-posted");
 
+  //remove active link from celsius
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   actualWeatherLocation.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 function showCelsiusTemperature(event) {
   event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
   let actualWeatherLocation = document.querySelector("#temperature-posted");
   actualWeatherLocation.innerHTML = Math.round(celsiusTemperature);
 }
