@@ -4,14 +4,15 @@
   border-radius: 5%;
   background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);
   background-blend-mode: multiply, multiply;
-  max-width: 500px;
+  max-width: 480px;
   margin: 10 30;
-  padding: 0 25px;
+  padding: 0 0 0 25px;
 }
 h1 {
   font-family: "Heebo", sans-serif;
-  margin-top: 30px;
+  margin-top: 15px;
   margin-bottom: 20px;
+  margin-right: 0;
   color: #f3efed;
   font-weight: bold;
 }
@@ -114,7 +115,8 @@ h6 {
   padding: auto;
   font-family: "Work Sans", sans-serif;
   color: black;
-  margin: 10px 160px;
+  margin: 10px 106px;
   font-weight: 300;
   font-size: medium;
+  max-width: 480px;
 }
