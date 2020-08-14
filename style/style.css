@@ -16,7 +16,7 @@ h1 {
   color: #f3efed;
   font-weight: bold;
 }
-form {
+.form {
 }
 .current-update-location {
   font-family: "Heebo", sans-serif;
@@ -77,6 +77,13 @@ ul {
   line-height: 5px;
 }
 
+.col {
+  color: #f3efed;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 0px;
+}
+
 #forecast {
   font-family: "Heebo", sans-serif;
   font-size: 14px;
@@ -85,28 +92,13 @@ ul {
   text-align: center;
   color: #f5a841;
 }
-.col {
-  color: #f3efed;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin-bottom: 0px;
-}
+
 #header-upcoming {
   font-family: "Heebo", sans-serif;
   font-size: 17x;
   color: #f3efed;
   padding: 0 0 20px 0;
 }
-.weather-now .active {
-  color: #f3efed;
-  cursor: default;
-}
-.weather-now .active:hover {
-  color: black;
-  cursor: default;
-  text-decoration: none;
-}
-
 h6 {
   margin: 0;
 }
@@ -119,4 +111,14 @@ h6 {
   font-weight: 300;
   font-size: medium;
   max-width: 480px;
+}
+
+.weather-now .active {
+  color: #f3efed;
+  cursor: default;
+}
+.weather-now .active:hover {
+  color: black;
+  cursor: default;
+  text-decoration: none;
 }
