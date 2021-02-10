@@ -11,7 +11,7 @@ By: Lisa Venneker Wand
 
 
 ## Description
-A simple app to find the weather of your searched location in Celcius and Fahrenheit.
+A simple app to find the weather of your searched location in Celcius and Fahrenheit, made with HTML, CSS and Javascript.
 
 
 ## Technologies used
