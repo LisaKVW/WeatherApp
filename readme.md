@@ -35,7 +35,7 @@ Visit the site and enter your location to know the current weather and upcoming 
 ## Screenshots
 Screenshot of app:
 
-![wireframe](https://i.imgur.com/5CCdzFV.png)
+![wireframe](https://i.imgur.com/iEEvXZz.png)
 
 ## Credits
 - Wireframe: https://www.invisionapp.com/freehand 
