@@ -1,5 +1,12 @@
+body {
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  margin-top: -50px;
+  margin-left: -100px;
+}
+
 .weather-app {
-  position: relative;
   border: 1px solid black;
   border-radius: 5%;
   background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);
@@ -33,6 +40,7 @@ input[value="search"] {
   border-radius: 1px;
   font-family: "Heebo", sans-serif;
   font-weight: bold;
+  border-radius: 22px;
 }
 #location-emoji {
   background-color: #faf9fa;
@@ -46,17 +54,18 @@ input[value="search"] {
   font-family: "Heebo", sans-serif;
   font-weight: bold;
   display: block;
+  border-radius: 22px;
 }
 input[value="search"]:hover {
   cursor: pointer;
-  background-color: #d5dfe5;
+  background-color: #BCF489;
   color: black;
   font-weight: bold;
   border: 1px solid #f3efed;
 }
 #location-emoji:hover {
   cursor: pointer;
-  background-color: #d5dfe5;
+  background-color: #BCF489;
   color: black;
   font-weight: bold;
   border: 1px solid #f3efed;
@@ -69,6 +78,7 @@ ul {
   max-width: 600px;
   margin: 0 30;
   padding: 0 25px;
+  margin-bottom: 0;
 }
 
 #weather-icon {
@@ -93,9 +103,10 @@ ul {
 
 #header-upcoming {
   font-family: "Heebo", sans-serif;
-  font-size: 17x;
+  font-size: 20x;
   color: #f3efed;
   padding: 0 0 20px 0;
+  font-weight: bolder;
 }
 h6 {
   margin: 0;
